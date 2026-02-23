@@ -1,0 +1,14 @@
+[providers]
+  Railway = true
+
+[build]
+  # Install dependencies
+  npmInstall = false
+
+[start]
+  # Override the start command
+  cmd = "cd server && npm start"
+
+[variables]
+  NODE_VERSION = "18"
+  RAILWAY_SERVICE_NAME = "jx-backend"

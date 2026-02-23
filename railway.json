@@ -2,11 +2,8 @@
   "$schema": "https://railway.app/schema.json",
   "build": {
     "builder": "NIXPACKS_V1",
-    "buildCommand": "cd server && npm install",
-    "startCommand": "cd server && node server.js",
-    "env": {
-      "NODE_VERSION": "18"
-    }
+    "installCommand": "cd server && npm install",
+    "startCommand": "cd server && node server.js"
   },
   "deploy": {
     "numReplicas": 1,
