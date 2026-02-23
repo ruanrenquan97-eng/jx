@@ -1,0 +1,13 @@
+{
+  "build": {
+    "command": "cd server && npm install",
+    "builder": "nixpacks",
+    "options": {
+      "nodeVersion": "18"
+    }
+  },
+  "start": {
+    "command": "cd server && node server.js",
+    "runtime": "node"
+  }
+}
