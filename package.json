@@ -2,12 +2,11 @@
   "name": "jx-performance-system",
   "version": "1.0.0",
   "description": "企业绩效管理系统",
-  "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
-    "build": "echo 'No build step required'"
+    "start": "cd server && node server.js",
+    "install:all": "npm install && cd server && npm install && cd ../frontend && npm install"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=18.0.0"
   }
 }
