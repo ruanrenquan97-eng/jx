@@ -1,13 +1,11 @@
-{
-  "build": {
-    "command": "cd server && npm install",
-    "builder": "nixpacks",
-    "options": {
-      "nodeVersion": "18"
-    }
-  },
-  "start": {
-    "command": "cd server && node server.js",
-    "runtime": "node"
-  }
-}
+services:
+  - type: web
+    name: jx-backend
+    env: node
+    buildCommand: cd server && npm install
+    startCommand: cd server && node server.js
+    envVars:
+      - key: PORT
+        value: 3001
+      - key: NODE_VERSION
+        value: 18

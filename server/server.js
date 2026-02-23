@@ -55,6 +55,12 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(PORT, () => {
-  console.log(`服务器运行在 http://localhost:${PORT}`);
-});
+// Vercel serverless export
+module.exports = app;
+
+// 本地运行
+if (process.env.VERCEL !== 'true') {
+  app.listen(PORT, () => {
+    console.log(`服务器运行在 http://localhost:${PORT}`);
+  });
+}
